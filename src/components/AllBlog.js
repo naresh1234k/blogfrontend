@@ -19,7 +19,7 @@ const Blog = ({ title, description, imageURL, userName, isUser,id }) => {
         navigate(`/myBlogs/${id}`)
     }
     const deleteRequest = async()=>{
-        const res = await axios.delete(`http://localhost:5000/api/blog/${id}`).catch(err=>console.log(err))
+        const res = await axios.delete(`https://blogbackend-i2p7.onrender.com/api/blog/${id}`).catch(err=>console.log(err))
         const data = await res.data;
         return data;
     }
